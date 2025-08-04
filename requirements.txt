@@ -1,0 +1,6 @@
+flask
+twilio
+openpyxl
+qrcode
+pillow
+requests

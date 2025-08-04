@@ -1,0 +1,28 @@
+ACCOUNT_SID = ACfb68e2c57ad9165fbf4dd623a71ae5d1
+
+AUTH_TOKEN = 247a629404c57948848f98187a0791bc
+
+Twilio WhatsApp number = +14155238886
+
+
+
+
+
+
+from twilio.rest import Client
+
+account_sid = 'ACfb68e2c57ad9165fbf4dd623a71ae5d1'
+auth_token = '[AuthToken]'
+client = Client(account_sid, auth_token)
+
+message = client.messages.create(
+  from_='whatsapp:+14155238886',
+  content_sid='HX350d429d32e64a552466cafecbe95f3c',
+  content_variables='{"1":"12/1","2":"3pm"}',
+  to='whatsapp:+919512842105'
+)
+
+print(message.sid)
+
+
+
